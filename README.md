@@ -4,4 +4,4 @@
 
 從 3G / 藍芽 / Wifi / NFC / RFID / 4G / 5G
 
-這一系列資訊生態的蓬勃發展才造就了，像是 [應用程式](https://zh.wikipedia.org/wiki/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F) => 雲端化 ( Web )、移動化 ( Mobile )
+這一系列硬體生態的蓬勃發展才造就了，軟體面 [應用程式](https://zh.wikipedia.org/wiki/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F) => 雲端化 ( Web )、移動化 ( Mobile ) 的溫床
