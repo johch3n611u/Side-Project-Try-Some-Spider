@@ -8,4 +8,6 @@
 
 新技術的不斷產生 [AI](https://zh.wikipedia.org/wiki/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD)、[AAI](https://www.google.com/search?q=%E5%B7%A5%E4%BA%BA%E6%99%BA%E6%85%A7&rlz=1C1CHBF_zh-TWTW905TW905&oq=%E5%B7%A5%E4%BA%BA%E6%99%BA%E6%85%A7&aqs=chrome..69i57j69i65.6277j0j4&sourceid=chrome&ie=UTF-8)、[IoT](https://zh.wikipedia.org/wiki/%E7%89%A9%E8%81%94%E7%BD%91)、[大數據](https://www.oracle.com/tw/big-data/what-is-big-data/)、[區塊鏈](https://zh.wikipedia.org/wiki/%E5%8C%BA%E5%9D%97%E9%93%BE) 最終還是要回歸到應用層面，利用這些技術達到需求目的。
 
-所以回歸正題
+---
+
+不好意思岔題了，所以回歸正題
