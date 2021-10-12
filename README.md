@@ -24,3 +24,28 @@
 ## 開發軌跡
 
 https://www.npmjs.com/package/google-spreadsheet
+
+---
+
+## 手動查詢範例
+
+|-|-|-|
+|-|-|-|
+|技能|Seek|104|
+|java|7,518|5701|
+|python|6,555|6277|
+|c#|5,153|5494|
+|php|3,787|6209|
+|react|3,579|1453|
+|angular|3,186|965|
+|angularjs|906|448|
+|vue|583|1486|
+|ruby|290|340|
+|Golang|228|459|
+|ruby on rails|99|2996|
+|front end developer|4,128|||
+|前端工程師||3416|
+|back end developer|565||
+|後端工程師||3437|
+|full stack developer|2,177|||
+|全端工程師||17916||
