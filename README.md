@@ -8,7 +8,9 @@
 
 [cheerio](https://www.wfublog.com/2019/11/google-apps-script-parse-html-xml-cheerio.html)：一種類似 JQ 的套件
 
-接續其他 solution 以 selenium-webdriver Node 執行此專案參考 [selenium-webdriver：爬蟲起手式，帶你認識所見即所得的爬蟲工具](https://ithelp.ithome.com.tw/m/articles/10241791)
+接續其他 solution 以 selenium-webdriver Node 執行此專案，因為本身在做全端工程師，除了 c# 以外比較常接觸到 node 就用此架構開發比較不用搞環境跟學其他語言
+
+參考 [selenium-webdriver：爬蟲起手式，帶你認識所見即所得的爬蟲工具](https://ithelp.ithome.com.tw/m/articles/10241791)
 
 ---
 
