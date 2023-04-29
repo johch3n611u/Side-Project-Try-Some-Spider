@@ -1,14 +1,14 @@
 > 2023 / 04 / 30
 
-先前因為忙碌且沒必須性，所以這個 side project 就一直以手動方式執行，最近看到大男孩更新了一篇 [第一次考爬蟲接案 | Web Scraping | 好賺嗎？](https://www.youtube.com/watch?v=PWAjaEeaaMM&ab_channel=BigBoyCanCode)，又讓我想到了這個專案，這次將以 Google Sheet 搭配 Google App Script。
+先前因為忙碌且沒急迫性，所以這個需求就一直以手動方式執行，最近看到大男孩更新了一篇 [第一次考爬蟲接案 | Web Scraping | 好賺嗎？](https://www.youtube.com/watch?v=PWAjaEeaaMM&ab_channel=BigBoyCanCode)，又讓我想到了這個專案，這次將以 Google Sheet 搭配 Google App Script。
 
-`花了兩天才發現 GAS 碰到 Google 政策問題與無法運行 browser automation 無法解析 SPA ，只能做一些簡單的爬蟲，發現此 solution 無法接續`
+`花了兩天才發現 GAS 碰到 Google 政策問題與無法運行 browser automation 函式庫無法解析 SPA ，只能做一些簡單的爬蟲，發現此 solution 無法接續`
 
 [( stackoverflow ) browser-automation-at-google-apps-scripts](https://stackoverflow.com/questions/75664595/browser-automation-at-google-apps-scripts)
 
 [cheerio](https://www.wfublog.com/2019/11/google-apps-script-parse-html-xml-cheerio.html)：一種類似 JQ 的套件
 
-接續以 selenium-webdriver 執行此專案參考 [selenium-webdriver：爬蟲起手式，帶你認識所見即所得的爬蟲工具](https://ithelp.ithome.com.tw/m/articles/10241791)
+接續其他 solution 以 selenium-webdriver Node 執行此專案參考 [selenium-webdriver：爬蟲起手式，帶你認識所見即所得的爬蟲工具](https://ithelp.ithome.com.tw/m/articles/10241791)
 
 ---
 
