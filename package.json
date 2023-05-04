@@ -1,0 +1,22 @@
+{
+  "1": "devDependencies在開發、測試環境中會用到的pacakge",
+  "2": "dependencies在正式環境中會用到的pacakge",
+  "3": "name專案名稱，全部小寫，不允許空格",
+  "4": "license專案協議",
+  "name": "spider",
+  "version": "0.0.1",
+  "description": "專案描述",
+  "author": "作者名字",
+  "scripts": {
+    "": "你可以撰寫支援的command作爲腳本"
+  },
+  "main": "入口檔案 index.js",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.0.3",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "selenium-webdriver": "^4.9.0"
+  }
+}

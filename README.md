@@ -1,3 +1,17 @@
+> 2023 / 05 / 03
+
+1. chrome://settings/help
+2. http://chromedriver.storage.googleapis.com/index.html
+3. https://chromedriver.chromium.org/downloads
+4. node index.js 使用 node 執行檔案
+5. dotenv：快速構建環境參數的套件
+6. [selenium-webdriver: Error: chrome.setDefaultService is not a function](https://stackoverflow.com/questions/72993126/selenium-webdriver-error-chrome-setdefaultservice-is-not-a-function)
+7. [ERROR:page_load_metrics_update_dispatcher.cc](https://stackoverflow.com/questions/75830184/errorpage-load-metrics-update-dispatcher-cc194-invalid-first-paint-error-usi)
+8. https://blog.csdn.net/weixin_45292658/article/details/108150531
+9. https://ithelp.ithome.com.tw/m/articles/10244446
+10. https://snyk.io/advisor/python/selenium/functions/selenium.webdriver.ChromeOptions
+11. https://github.com/dean9703111/ithelp_30days/tree/master/day29
+
 > 2023 / 04 / 30
 
 先前因為忙碌且沒急迫性，所以這個需求就一直以手動方式執行，最近看到大男孩更新了一篇 [第一次考爬蟲接案 | Web Scraping | 好賺嗎？](https://www.youtube.com/watch?v=PWAjaEeaaMM&ab_channel=BigBoyCanCode)，又讓我想到了這個專案，這次將以 Google Sheet 搭配 Google App Script。
@@ -6,7 +20,7 @@
 
 [( stackoverflow ) browser-automation-at-google-apps-scripts](https://stackoverflow.com/questions/75664595/browser-automation-at-google-apps-scripts)
 
-[cheerio](https://www.wfublog.com/2019/11/google-apps-script-parse-html-xml-cheerio.html)：一種類似 JQ 的套件
+[cheerio](https://www.wfublog.com/2019/11/google-apps-script-parse-html-xml-cheerio.html)：一種類似 JQ 的套件，用於爬回資料時做後續處理
 
 接續其他 solution 以 selenium-webdriver Node 執行此專案，因為本身在做全端工程師，除了 c# 以外比較常接觸到 node 就用此架構開發比較不用搞環境跟學其他語言
 
