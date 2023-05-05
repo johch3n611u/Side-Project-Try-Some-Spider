@@ -11,6 +11,10 @@
 9. https://ithelp.ithome.com.tw/m/articles/10244446
 10. https://snyk.io/advisor/python/selenium/functions/selenium.webdriver.ChromeOptions
 11. https://github.com/dean9703111/ithelp_30days/tree/master/day29
+12. [Add options to selenium chrome browser using nodejs](https://stackoverflow.com/questions/72839494/add-options-to-selenium-chrome-browser-using-nodejs)
+13. [google-spreadsheet](https://ithelp.ithome.com.tw/m/articles/10234325)：npm Google Sheet 在包一層，但已經很久沒更新了
+14. [googleapis](https://github.com/dean9703111/ithelp_30days/blob/master/day29/tools/google_sheets/index.js)：比較麻煩要做一些基礎工作，較長更新且有谷哥參與
+15. https://github.com/theoephraim/node-google-spreadsheet
 
 > 2023 / 04 / 30
 
