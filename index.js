@@ -24,7 +24,7 @@ const dayjs = require('dayjs');
     let urlRoot = 'https://www.seek.com.au/';
     let url = '';
     let techCount = [];
-    const techList = ['React', 'angular', 'vue', 'c#', 'javascript', 'java', 'back end', 'front end', 'Python', 'Golang', 'Rails', 'ruby on rails', 'ruby', 'php','laravel', '.net', '.net core', 'Software Engineer', 'Full Stack'];
+    const techList = ['React', 'angular', 'vue', 'c%23', 'javascript', 'java', 'back end', 'front end', 'Python', 'Golang', 'Rails', 'ruby on rails', 'ruby', 'php','laravel', '.net', '.net core', 'Software Engineer', 'Full Stack'];
     
     console.log('techList',techList);
 
