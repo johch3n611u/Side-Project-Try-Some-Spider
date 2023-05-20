@@ -3,79 +3,72 @@ const dayjs = require('dayjs');
 
 
 const webConfig = {
-    "104Site":"https://www.104.com.tw/jobs/search/?ro=0&keyword=",
-    "Seek":"https://www.seek.com.au/jobs?keywords=",
- };
+    "104Site": "https://www.104.com.tw/jobs/search/?ro=0&keyword=",
+    "Seek": "https://www.seek.com.au/jobs?keywords=",
+};
 
 (async () => {
 
     let regex = /<span data-automation="totalJobsCount">([^<]+)<\/span>/;
-    let techCount,site104TechCount = [];
-    let techList = ['React', 'angular', 'vue', 'c%23', 'javascript', 'java', 'back end', 'front end', 'Python', 'Golang', 'Rails', 'ruby on rails', 'ruby', 'php','laravel', '.net', '.net core', 'Software Engineer', 'Full Stack'];
-    techCount = await getTechTitleCount(webConfig.Seek,techList,regex);
-    regex = /<li data-value="0" class="b-nav-tabs__active">全部<span class="js-txt">\((\d+)\)<\/span><\/li>/;
-    techList = [...techList,"前端","後端","全端"]
-
-    site104TechCount = await getTechTitleCount(webConfig['104Site'],techList,regex);
-
-    const headerValues = [...techList,...techList.map(value=>"104 "+value)]
-    // https://docs.google.com/spreadsheets/d/<docID>/edit#gid=<sheetID>
-    const sheet = await getSheetData('1Pw1hj-LDVy4Yyqa5UbexPfRUmOr3mp84bL_UAdG8XU4', '0');
-    
-    try{
-        console.log
-        await sheet.setHeaderRow(headerValues);
-        await sheet.addRow(
-            { 
-                'date': dayjs().format('YYYY/MMDD'),
-                'React': techCount[0],
-                'angular': techCount[1],
-                'vue': techCount[2],
-                'c#': techCount[3],
-                'javascript': techCount[4],
-                'java': techCount[5],
-                'back end': techCount[6],
-                'front end': techCount[7],
-                'Python': techCount[8],
-                'Golang': techCount[9],
-                'Rails': techCount[10],
-                'ruby on rails': techCount[11],
-                'ruby': techCount[12],
-                'php': techCount[13],
-                'laravel': techCount[14],
-                '.net': techCount[15],
-                '.net core': techCount[16],
-                'Software Engineer': techCount[17],
-                'Full Stack': techCount[18],
-                '104 React': site104TechCount[0],
-                '104 angular': site104TechCount[1],
-                '104 vue': site104TechCount[2],
-                '104 c#': site104TechCount[3],
-                '104 javascript': site104TechCount[4],
-                '104 java': site104TechCount[5],
-                '104 back end': site104TechCount[6],
-                '104 front end': site104TechCount[7],
-                '104 Python': site104TechCount[8],
-                '104 Golang': site104TechCount[9],
-                '104 Rails': site104TechCount[10],
-                '104 ruby on rails': site104TechCount[11],
-                '104 ruby': site104TechCount[12],
-                '104 php': site104TechCount[13],
-                '104 laravel': site104TechCount[14],
-                '104 .net': site104TechCount[15],
-                '104 .net core': site104TechCount[16],
-                '104 Software Engineer': site104TechCount[17],
-                '104 Full Stack': site104TechCount[18],
-                '104 前端': site104TechCount[19],
-                '104 後端': site104TechCount[20],
-                '104 全端': site104TechCount[21]
-            }
-        );
-    }catch(ex){
-        console.log(ex);
-    }finally{
-        console.log('end');
+    let techCount, site104TechCount = [];
+    let techList = ['React', 'angular', 'vue', 'c%23', 'javascript', 'java', 'back end', 'front end', 'Python', 'Golang', 'Rails', 'ruby on rails', 'ruby', 'php', 'laravel', '.net', '.net core', 'Software Engineer', 'Full Stack'];
+    techCount = await getTechTitleCount(webConfig.Seek, techList, regex);
+    const seekData = {
+        'date': dayjs().format('YYYY/MMDD'),
+        'React': techCount[0],
+        'angular': techCount[1],
+        'vue': techCount[2],
+        'c%23': techCount[3],
+        'javascript': techCount[4],
+        'java': techCount[5],
+        'back end': techCount[6],
+        'front end': techCount[7],
+        'Python': techCount[8],
+        'Golang': techCount[9],
+        'Rails': techCount[10],
+        'ruby on rails': techCount[11],
+        'ruby': techCount[12],
+        'php': techCount[13],
+        'laravel': techCount[14],
+        '.net': techCount[15],
+        '.net core': techCount[16],
+        'Software Engineer': techCount[17],
+        'Full Stack': techCount[18],
     }
+
+
+
+    await setDataValue(['date',...techList],seekData,'0');
+    regex = /<li data-value="0" class="b-nav-tabs__active">全部<span class="js-txt">\((\d+)\)<\/span><\/li>/;
+    techList = [...techList, "前端", "後端", "全端"]
+   
+    site104TechCount = await getTechTitleCount(webConfig['104Site'], techList, regex);
+    const site104Data = {
+        'date': dayjs().format('YYYY/MMDD'),
+        '104 React': site104TechCount[0],
+        '104 angular': site104TechCount[1],
+        '104 vue': site104TechCount[2],
+        '104 c%23': site104TechCount[3],
+        '104 javascript': site104TechCount[4],
+        '104 java': site104TechCount[5],
+        '104 back end': site104TechCount[6],
+        '104 front end': site104TechCount[7],
+        '104 Python': site104TechCount[8],
+        '104 Golang': site104TechCount[9],
+        '104 Rails': site104TechCount[10],
+        '104 ruby on rails': site104TechCount[11],
+        '104 ruby': site104TechCount[12],
+        '104 php': site104TechCount[13],
+        '104 laravel': site104TechCount[14],
+        '104 .net': site104TechCount[15],
+        '104 .net core': site104TechCount[16],
+        '104 Software Engineer': site104TechCount[17],
+        '104 Full Stack': site104TechCount[18],
+        '104 前端': site104TechCount[19],
+        '104 後端': site104TechCount[20],
+        '104 全端': site104TechCount[21]
+    }
+    await setDataValue(['date',...techList.map(value => "104 " + value)],site104Data,'1382771767');
 
 })();
 
@@ -87,8 +80,17 @@ async function getSheetData(docID, sheetID, credentialsPath = './techtrendscrawl
     return await doc.sheetsById[sheetID]; // 加載工作表
 };
 
+async function setDataValue(headerValues, rowObject,sheetID){
+    console.log(headerValues);
+    console.log(rowObject);
+        // https://docs.google.com/spreadsheets/d/<docID>/edit#gid=<sheetID>
+    const sheet = await getSheetData('1Pw1hj-LDVy4Yyqa5UbexPfRUmOr3mp84bL_UAdG8XU4', sheetID);
+    await sheet.setHeaderRow(headerValues);
+    await sheet.addRow(rowObject);
+}
 
-function createClient(){
+
+function createClient() {
     const { Builder, By, Key, until, Button } = require('selenium-webdriver');
     const { Options } = require('selenium-webdriver/chrome.js');
     const options = new Options();
@@ -108,27 +110,26 @@ function createClient(){
 
     return new Builder().forBrowser('chrome').withCapabilities(options).build()
 }
-async function getTechTitleCount(urlRoot,techTitleList,regexString)
-{
+async function getTechTitleCount(urlRoot, techTitleList, regexString) {
     const driver = createClient();
-    console.log("driver",driver);
-    let techTitleCount = []; 
+    console.log("driver", driver);
+    let techTitleCount = [];
 
     for (let tech of techTitleList) {
-        try{
+        try {
             url = `${urlRoot}${tech}`;
             await driver.get(url);
             await driver.sleep((Math.floor(Math.random() * 4) + 3) * 10);
-            await driver.getPageSource().then(result=>{
+            await driver.getPageSource().then(result => {
                 const match = result.match(regexString);
-                if(match){
-                    techTitleCount.push(match[1].replace(',',''));
+                if (match) {
+                    techTitleCount.push(match[1].replace(',', ''));
                 }
             });
-        }catch(ex){
+        } catch (ex) {
             console.log(ex);
-        }finally{
-            console.log('tech',tech);
+        } finally {
+            console.log('tech', tech);
         }
     }
     driver.quit();
