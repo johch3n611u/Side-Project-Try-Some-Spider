@@ -15,13 +15,16 @@ const webConfig = {
     techCount = await getTechTitleCount(webConfig.Seek,techList,regex);
     regex = /<li data-value="0" class="b-nav-tabs__active">全部<span class="js-txt">\((\d+)\)<\/span><\/li>/;
     techList = [...techList,"前端","後端","全端"]
+
     site104TechCount = await getTechTitleCount(webConfig['104Site'],techList,regex);
 
+    const headerValues = [...techList,...techList.map(value=>"104 "+value)]
     // https://docs.google.com/spreadsheets/d/<docID>/edit#gid=<sheetID>
     const sheet = await getSheetData('1Pw1hj-LDVy4Yyqa5UbexPfRUmOr3mp84bL_UAdG8XU4', '0');
     
     try{
-        await sheet.setHeaderRow(techList);
+        console.log
+        await sheet.setHeaderRow(headerValues);
         await sheet.addRow(
             { 
                 'date': dayjs().format('YYYY/MMDD'),
@@ -63,9 +66,9 @@ const webConfig = {
                 '104 .net core': site104TechCount[16],
                 '104 Software Engineer': site104TechCount[17],
                 '104 Full Stack': site104TechCount[18],
-                '前端': site104TechCount[19],
-                '後端': site104TechCount[20],
-                '全端': site104TechCount[21]
+                '104 前端': site104TechCount[19],
+                '104 後端': site104TechCount[20],
+                '104 全端': site104TechCount[21]
             }
         );
     }catch(ex){
