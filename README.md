@@ -1,3 +1,14 @@
+> 2023 / 05 /26
+
+1. 新增 line bot 爬各大股票指數定期通知
+2. asus bios 定時開機
+3. window+R => shell:startup 自動啟動 bat
+4. windows 排程 bat 啟動爬蟲
+5. [Google App Script 串 line Notify](https://github.com/dang113108/591_rent)
+6. [GAS 鬧鐘設定觸發機制](https://hackmd.io/@ugm/rJiUa4WsH)，程式碼請參考 GAS-Stock.js
+7. Google Sheet 操作方式 [https://developers.google.com/apps-script/reference/spreadsheet/sheet?hl=zh-tw#getrowgrouprowindex,-groupdepth](https://developers.google.com/apps-script/reference/spreadsheet/sheet?hl=zh-tw#getrowgrouprowindex,-groupdepth)
+5. [Google App Script 串 discord Notify](https://stackoverflow.com/questions/47639463/send-message-to-discord-via-google-apps-script)
+
 > 2023 / 05 / 03
 
 1. chrome://settings/help
