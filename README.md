@@ -8,6 +8,7 @@
 6. [GAS 鬧鐘設定觸發機制](https://hackmd.io/@ugm/rJiUa4WsH)，程式碼請參考 GAS-Stock.js
 7. Google Sheet 操作方式 [https://developers.google.com/apps-script/reference/spreadsheet/sheet?hl=zh-tw#getrowgrouprowindex,-groupdepth](https://developers.google.com/apps-script/reference/spreadsheet/sheet?hl=zh-tw#getrowgrouprowindex,-groupdepth)
 5. [Google App Script 串 discord Notify](https://stackoverflow.com/questions/47639463/send-message-to-discord-via-google-apps-script)
+6. [useServiceAccountAuth 開啟 Google Sheet 權限](https://ithelp.ithome.com.tw/articles/10234325)
 
 > 2023 / 05 / 03
 

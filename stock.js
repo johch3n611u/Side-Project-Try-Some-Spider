@@ -89,11 +89,11 @@ function createClient() {
 }
 
 async function setDataValue(row) {
-    const doc = new GoogleSpreadsheet('1Pw1hj-LDVy4Yyqa5UbexPfRUmOr3mp84bL_UAdG8XU4');
+    const doc = new GoogleSpreadsheet('1WJM0l_GL-tVPPPJkoUf4AA7swb3PsZ16KHtfthLf_Z4');
     const creds = require('./techtrendscrawler-7319fb62fc19.json');
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo(); // 加載文檔屬性和工作表
-    const sheet = await doc.sheetsById['1381773314']; // 加載工作表
+    const sheet = await doc.sheetsById['0']; // 加載工作表
     await sheet.addRow(row);
 }
 
