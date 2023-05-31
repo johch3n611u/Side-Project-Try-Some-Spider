@@ -2,6 +2,7 @@ function myFunction() {
     let sheet = initSheet();
     sendToLine(encodeURIComponent(getFormData(sheet)));
     // sendToDiscord(getFormData(sheet));
+    console.log(getFormData(sheet))
 }
 
 function initSheet() {
@@ -29,10 +30,10 @@ function getFormData(sheet) {
     // msg += `\nVOO現值為${lastRow[4]}相較上一次紀錄${secondLastRow[4]}，漲幅為${percentageIncrease(lastRow, secondLastRow, 4)}`;
     // msg += `\nQQQ現值為${lastRow[5]}相較上一次紀錄${secondLastRow[5]}，漲幅為${percentageIncrease(lastRow, secondLastRow, 5)}`;
 
-    msg += `\n台指：${Math.round(lastRow[1])}，漲幅${percentageIncrease(lastRow, secondLastRow, 1)}, ${maxAndMin(sheet, 1)}`;
-    msg += `\n0050：${Math.round(lastRow[2])}，漲幅${percentageIncrease(lastRow, secondLastRow, 2)}, ${maxAndMin(sheet, 2)}`;
-    msg += `\nS&P500：${Math.round(lastRow[3])}，漲幅${percentageIncrease(lastRow, secondLastRow, 3)}, ${maxAndMin(sheet, 3)}`;
-    msg += `\nQQQ：${Math.round(lastRow[5])}，漲幅${percentageIncrease(lastRow, secondLastRow, 5)}, ${maxAndMin(sheet, 5)}`;
+    msg += `\n\n台指：${round(lastRow[1])}，漲幅${percentageIncrease(lastRow, secondLastRow, 1)}`;
+    msg += `\n\n0050：${round(lastRow[2])}，漲幅${percentageIncrease(lastRow, secondLastRow, 2)}${maxAndMin(sheet, 2)}`;
+    msg += `\n\nS&P500：${round(lastRow[3])}，漲幅${percentageIncrease(lastRow, secondLastRow, 3)}`;
+    msg += `\n\nQQQ：${round(lastRow[5])}，漲幅${percentageIncrease(lastRow, secondLastRow, 5)}${maxAndMin(sheet, 5)}`;
 
     return msg;
 }
@@ -75,7 +76,7 @@ function percentageIncrease(lastRow, secondLastRow, cal) {
         drop = drop * -1;
         isNegative = '-';
     }
-    return `${isNegative}${Math.round((drop / lastRow[cal]) * 100)}%(${isNegative}${Math.round(drop)})`
+    return `${isNegative}${round((drop / lastRow[cal]) * 100)}%(${isNegative}${round(drop)})`
 }
 
 function businessIndicatorsDataBase(lastRow, cal) {
@@ -110,30 +111,43 @@ function maxAndMin(sheet, cal) {
         return acc + curr;
     }, 0);
 
-    let average = Math.round(sum / values.length);
-    let msg = '';
+    let average = round(sum / values.length);
+    let msg = ', ';
     let drop = row[values.length - 1] - average;
     let suggestion = '';
 
     if (row[values.length - 1] > average) {
-        msg = `大於均線　${average}　(+${Math.round(drop)}) `;
+        msg += `大於均線　${average}　(+${round(drop)}) `;
         suggestion = '不建議購買';
     } else {
-        msg = `小於均線　${average}　(-${Math.round(drop)}) `;
+        msg += `小於均線　${average}　(-${round(drop)}) `;
         suggestion = '建議購買';
     }
 
-    let averageDrop = Math.round(drop / average);
+    let averageDrop = round((drop / average) * 100);
+    console.log(averageDrop)
 
     if (averageDrop > 20) {
-        msg += '超級無敵';
+        msg += ', 超級無敵';
     } else if (averageDrop > 15) {
-        msg += '極度';
+        msg += ', 超級';
     } else if (averageDrop > 10) {
-        msg += '非常';
+        msg += ', 極度';
+    } else if (averageDrop >= 5) {
+        msg += ', 非常';
     }
 
     msg = msg + suggestion;
 
+    if (Math.round(drop) < 1) {
+        msg = ', 與均線接近持平可在觀望';
+    }
+
     return msg;
+}
+
+// https://www.delftstack.com/zh-tw/howto/javascript/javascript-round-to-2-decimal-places/
+function round(num) {
+    var m = Number((Math.abs(num) * 100).toPrecision(15));
+    return Math.round(m) / 100 * Math.sign(num);
 }

@@ -7,11 +7,15 @@ const urls = {
         index: {
             tw_stock: {
                 url: 'https://s.yimg.com/nb/tw_stock_frontend/scripts/TseChart/TseChart.eb1b267900.html?sid=TSE',
-                regx: /<g style="" font-size="14px" zIndex="3" transform="translate\(464,0\)"><text x="3" zIndex="1" style="color:#DF3F3F;fill:#DF3F3F;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/
+                regx: /<g style="" font-size="14px" zIndex="3" transform="translate\(464,0\)"><text x="3" zIndex="1" style="color:#DF3F3F;fill:#DF3F3F;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
+                regx2: /<g style="" font-size="14px" zIndex="3" transform="translate\(464,0\)"><text x="3" zIndex="1" style="color:#338B48;fill:#338B48;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
+                regx3: /<g style="" font-size="14px" zIndex="3" transform="translate\(464,0\)"><text x="3" zIndex="1" style="color:#338B48;fill:#338B48;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/
             },
             tw_0050: {
                 url: 'https://tw.stock.yahoo.com/quote/0050',
-                regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/
+                regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/,
+                regx2: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\)">([^<]+)<\/span>/,
+                regx3: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\) C\(\$c-trend-down\)">([^<]+)<\/span>/,
             },
             BID: {
                 url: 'https://index.ndc.gov.tw/n/zh_tw/lightscore#/',
@@ -65,7 +69,7 @@ const urls = {
         'BID': await getPageTarget(driver, urls.tw.index.BID, 300),
     };
     console.log(row);
-    await setDataValue(row);
+    // await setDataValue(row);
     driver.quit();
 })();
 
@@ -118,7 +122,19 @@ async function getPageTarget(driver, page, speed = 10) {
             if (match) {
                 res = match[1].replace(',', '');
             } else {
-                console.log('not match');
+                console.log('not match1', page.regx);
+                const match2 = result.match(page.regx2);
+                if (match2) {
+                    res = match2[1].replace(',', '');
+                }else{
+                    console.log('not match2', page.regx2);
+                    const match3 = result.match(page.regx3);
+                    if (match3) {
+                        res = match3[1].replace(',', '');
+                    }else{
+                        console.log('not match3', page.regx3);
+                    }
+                }
             }
         });
         return res;
