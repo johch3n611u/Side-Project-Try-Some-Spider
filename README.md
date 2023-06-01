@@ -1,5 +1,7 @@
 > 2023 / 05 /26
 
+![image](https://github.com/johch3n611u/Side-Project-Try-Some-Spider/assets/46659635/21c783d2-c486-4ce2-b78b-21a33b8a3558)
+
 1. 新增 line bot 爬各大股票指數定期通知
 2. asus bios 定時開機
 3. window+R => shell:startup 自動啟動 bat
@@ -11,6 +13,8 @@
 6. [useServiceAccountAuth 開啟 Google Sheet 權限](https://ithelp.ithome.com.tw/articles/10234325)
 
 > 2023 / 05 / 03
+
+![image](https://github.com/johch3n611u/Side-Project-Try-Some-Spider/assets/46659635/aefe8a5b-55b5-4bcf-ad7f-d38d0b04d413)
 
 1. chrome://settings/help
 2. http://chromedriver.storage.googleapis.com/index.html
