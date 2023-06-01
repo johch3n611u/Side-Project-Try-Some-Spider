@@ -44,15 +44,18 @@ const urls = {
     us: {
         SP500: {
             url: 'https://tw.stock.yahoo.com/quote/%5EGSPC',
-            regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(4px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/
+            regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(4px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/,
+            regx2: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(4px\) D\(f\) Ai\(c\) C\(\$c-trend-down\)">([^<]+)<\/span>/,
         },
         VOO: {
             url: 'https://tw.stock.yahoo.com/quote/VOO',
-            regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(4px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/
+            regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(4px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/,
+            regx2: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(4px\) D\(f\) Ai\(c\) C\(\$c-trend-down\)">([^<]+)<\/span>/,
         },
         QQQ: {
             url: 'https://tw.stock.yahoo.com/quote/QQQ',
-            regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(4px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/
+            regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(4px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/,
+            regx2: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(4px\) D\(f\) Ai\(c\) C\(\$c-trend-down\)">([^<]+)<\/span>/,
         }
     }
 };
@@ -69,7 +72,7 @@ const urls = {
         'BID': await getPageTarget(driver, urls.tw.index.BID, 300),
     };
     console.log(row);
-    // await setDataValue(row);
+    await setDataValue(row);
     driver.quit();
 })();
 
@@ -125,6 +128,7 @@ async function getPageTarget(driver, page, speed = 10) {
                 console.log('not match1', page.regx);
                 const match2 = result.match(page.regx2);
                 if (match2) {
+                    console.log('match2[1]',match2[1])
                     res = match2[1].replace(',', '');
                 }else{
                     console.log('not match2', page.regx2);
