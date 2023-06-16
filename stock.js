@@ -27,6 +27,12 @@ const urls = {
                     { name: '轉高', range: '37-32' },
                     { name: '熱絡', range: '45-38' },
                 ]
+            },
+            TSMC :{
+                url: 'https://tw.stock.yahoo.com/quote/2330.TW',
+                regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/,
+                regx2: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\)">([^<]+)<\/span>/,
+                regx3: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\) C\(\$c-trend-down\)">([^<]+)<\/span>/,
             }
         },
         category: {
@@ -70,6 +76,7 @@ const urls = {
         'VOO': await getPageTarget(driver, urls.us.VOO),
         'QQQ': await getPageTarget(driver, urls.us.QQQ),
         'BID': await getPageTarget(driver, urls.tw.index.BID, 300),
+        'TSMC': await getPageTarget(driver, urls.tw.index.TSMC),
     };
     console.log(row);
     await setDataValue(row);

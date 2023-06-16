@@ -21,6 +21,7 @@ function getFormData(sheet) {
     // date,tw_stock,tw_0050,SP500,VOO,QQQ,BID
     // [2023/0526, 16505.05, 125.95, 4151.28, 380.92, 339.72, 7.0]
 
+    maxAndMin(sheet, 2);
     let msg = `${lastRow[0]}，以下為 ${values.length} 天均線\n`;
 
     // msg += `${lastRow[0]}\n台股大盤現值為${lastRow[1]}相較上一次紀錄${secondLastRow[1]}，漲幅為${percentageIncrease(lastRow, secondLastRow, 1)}`;
@@ -32,6 +33,7 @@ function getFormData(sheet) {
 
     msg += `\n\n台指：${round(lastRow[1])}，漲幅${percentageIncrease(lastRow, secondLastRow, 1)}`;
     msg += `\n\n0050：${round(lastRow[2])}，漲幅${percentageIncrease(lastRow, secondLastRow, 2)}${maxAndMin(sheet, 2)}`;
+    msg += `\n\nTSMC2330：${round(lastRow[2])}，漲幅${percentageIncrease(lastRow, secondLastRow, 6)}`;
     msg += `\n\nS&P500：${round(lastRow[3])}，漲幅${percentageIncrease(lastRow, secondLastRow, 3)}`;
     msg += `\n\nQQQ：${round(lastRow[5])}，漲幅${percentageIncrease(lastRow, secondLastRow, 5)}${maxAndMin(sheet, 5)}`;
 
@@ -112,6 +114,9 @@ function maxAndMin(sheet, cal) {
     }, 0);
 
     let average = round(sum / values.length);
+    if(cal == 2){
+      averagePrice = average;
+    }
     let msg = ', ';
     let drop = row[values.length - 1] - average;
     let suggestion = '';
@@ -145,6 +150,8 @@ function maxAndMin(sheet, cal) {
 
     return msg;
 }
+
+let averagePrice = 0;
 
 // https://www.delftstack.com/zh-tw/howto/javascript/javascript-round-to-2-decimal-places/
 function round(num) {
