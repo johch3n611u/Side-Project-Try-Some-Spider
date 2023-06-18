@@ -11,7 +11,7 @@ const webConfig = {
 
     let regex = /<span data-automation="totalJobsCount">([^<]+)<\/span>/;
     let techCount, site104TechCount = [];
-    let techList = ['React', 'angular', 'vue', 'c%23', 'javascript', 'java', 'back end', 'front end', 'Python', 'Golang', 'Rails', 'ruby on rails', 'ruby', 'php', 'laravel', '.net', '.net core', 'Software Engineer', 'Full Stack'];
+    let techList = ['React', 'angular', 'vue', 'c%23', 'javascript', 'java', 'back end', 'front end', 'Python', 'Golang', 'Rails', 'ruby on rails', 'ruby', 'php', 'laravel', '.net', '.net core', 'Software Engineer', 'Full Stack', 'azure', 'aws', 'gcp'];
     techCount = await getTechTitleCount(webConfig.Seek, techList, regex);
     const seekData = {
         'date': dayjs().format('YYYY/MMDD'),
@@ -34,6 +34,9 @@ const webConfig = {
         '.net core': techCount[16],
         'Software Engineer': techCount[17],
         'Full Stack': techCount[18],
+        'azure': techCount[19],
+        'aws': techCount[20],
+        'gcp': techCount[21],
     }
 
 
@@ -64,9 +67,12 @@ const webConfig = {
         '104 .net core': site104TechCount[16],
         '104 Software Engineer': site104TechCount[17],
         '104 Full Stack': site104TechCount[18],
-        '104 前端': site104TechCount[19],
-        '104 後端': site104TechCount[20],
-        '104 全端': site104TechCount[21]
+        '104 azure': site104TechCount[19],
+        '104 aws': site104TechCount[20],
+        '104 gcp': site104TechCount[21],
+        '104 前端': site104TechCount[22],
+        '104 後端': site104TechCount[23],
+        '104 全端': site104TechCount[24],
     }
     await setDataValue(['date',...techList.map(value => "104 " + value)],site104Data,'1382771767');
 
