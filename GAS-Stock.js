@@ -33,7 +33,7 @@ function getFormData(sheet) {
 
     msg += `\n\n台指：${round(lastRow[1])}，漲幅${percentageIncrease(lastRow, secondLastRow, 1)}`;
     msg += `\n\n0050：${round(lastRow[2])}，漲幅${percentageIncrease(lastRow, secondLastRow, 2)}${maxAndMin(sheet, 2)}`;
-    msg += `\n\nTSMC2330：${round(lastRow[2])}，漲幅${percentageIncrease(lastRow, secondLastRow, 6)}`;
+    msg += `\n\nTSMC2330：${round(lastRow[7])}，漲幅${percentageIncrease(lastRow, secondLastRow, 7)}`;
     msg += `\n\nS&P500：${round(lastRow[3])}，漲幅${percentageIncrease(lastRow, secondLastRow, 3)}`;
     msg += `\n\nQQQ：${round(lastRow[5])}，漲幅${percentageIncrease(lastRow, secondLastRow, 5)}${maxAndMin(sheet, 5)}`;
 
