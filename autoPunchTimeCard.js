@@ -1,0 +1,99 @@
+const { Builder, By, Key, until, Button } = require('selenium-webdriver');
+
+const dayjs = require('dayjs');
+const duration = require('dayjs/plugin/duration');
+dayjs.extend(duration);
+
+function createClient() {
+    const { Options } = require('selenium-webdriver/chrome.js');
+    const options = new Options();
+    //因為FB會有notifications干擾到爬蟲，所以要先把它關閉
+    options.setUserPreferences({ 'profile.default_content_setting_values.notifications': 1 });
+    //不加載圖片提高效率
+    options.addArguments('blink-settings=imagesEnabled=false');
+    //瀏覽器不提供頁面觀看，linux下如果系統是純文字介面不加這條會啓動失敗
+    options.addArguments('--headless');
+    //這個option可以讓你跟headless時網頁端的console.log說掰掰
+    options.addArguments('--log-level=3');
+    //使用共享內存RAM，提升爬蟲穩定性
+    options.addArguments('--disable-dev-shm-usage');
+    //規避部分chrome gpu bug，提升爬蟲穩定性
+    options.addArguments('--disable-gpu');
+    return new Builder().forBrowser('chrome').withCapabilities(options).build()
+}
+
+(async function example() {
+    // 開啟瀏覽器
+    const driver = createClient();
+
+    try {
+        const isHoliday = IsHoliday();
+        console.log(`isHoliday：${isHoliday}`);
+        if (isHoliday) {
+            return;
+        }
+
+        // 前往登入頁面
+        await driver.get('https://cloud.nueip.com/');
+
+        // 輸入帳號和密碼
+        const config = require('./nueipConfig.json');
+        await driver.findElement(By.name('inputCompany')).sendKeys(config.inputCompany);
+        await driver.findElement(By.name('inputID')).sendKeys(config.inputID);
+        await driver.findElement(By.name('inputPassword')).sendKeys(config.inputPassword, Key.RETURN);
+
+        // 在登入成功的頁面執行其他操作
+        const randomTime = (Math.floor(Math.random() * 4) + 3) * 25000;
+        // 將毫秒轉換為分鐘
+        console.log(`延遲 ${dayjs.duration(randomTime).minutes()} 分鐘`);
+        await driver.sleep(randomTime);
+
+        // 找到按鈕並點擊
+        let buttonId = GetbuttonId();
+        console.log(buttonId)
+        await driver.findElement(By.id(buttonId)).click();
+
+        // 等待操作完成
+        await driver.sleep(1000);
+
+    } finally {
+        // 關閉瀏覽器
+        await driver.quit();
+        console.log("end")
+    }
+})();
+
+function GetbuttonId() {
+    // 取得現在時間
+    const now = dayjs();
+    // 取得上午 9 點的時間
+    const nineAM = now.set('hour', 9).set('minute', 0).set('second', 0);
+    // 取得上午 10 點的時間
+    const tenAM = now.set('hour', 10).set('minute', 0).set('second', 0);
+    // 取得下午 6 點的時間
+    const sixPM = now.set('hour', 18).set('minute', 0).set('second', 0);
+    // 取得下午 7 點的時間
+    const sevenPM = now.set('hour', 19).set('minute', 0).set('second', 0);
+    // 判斷現在時間是否在上午 9 點與上午 10 點之間
+    let buttonId = '';
+
+    if (now.isAfter(nineAM) && now.isBefore(tenAM)) {
+        buttonId = 'clockin';
+    }  
+    
+    if (now.isAfter(sixPM) && now.isBefore(sevenPM)) {
+        buttonId = 'clockout'
+    }
+
+    return buttonId;
+}
+
+function IsHoliday() {
+    const holidays = require('./c668969cc230c529ab9ec5700d9eab9e_export.json');
+    const holiday = holidays.find(h => {
+        const holidayDate = dayjs(h.Date, 'YYYYMMDD', true);
+        const now = dayjs().format('YYYYMMDD');
+        return holidayDate.isSame(now, 'day');
+    });
+    return holiday ? false : false;
+}
