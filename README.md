@@ -13,6 +13,8 @@
 6. [useServiceAccountAuth 開啟 Google Sheet 權限](https://ithelp.ithome.com.tw/articles/10234325)
 7. 新增 auto punch time card
 7. [臺北市政府行政機關辦公日曆表](https://data.gov.tw/dataset/145708)
+8. 移除 shell:startup => clear.bat => :: 使顯示器停下，並顯示"請按任意鍵繼續..." pause
+
 
 > 2023 / 05 / 03
 

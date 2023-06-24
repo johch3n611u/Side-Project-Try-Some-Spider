@@ -95,5 +95,6 @@ function IsHoliday() {
         const now = dayjs().format('YYYYMMDD');
         return holidayDate.isSame(now, 'day');
     });
-    return holiday ? false : false;
+    console.log(holiday);
+    return holiday ? true : false;
 }
