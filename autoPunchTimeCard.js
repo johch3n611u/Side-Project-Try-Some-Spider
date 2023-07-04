@@ -27,32 +27,29 @@ function createClient() {
     const driver = createClient();
 
     try {
+        // 如果是假日不執行
         const isHoliday = IsHoliday();
         console.log(`isHoliday：${isHoliday}`);
         if (isHoliday) {
             return;
         }
-
         // 前往登入頁面
         await driver.get('https://cloud.nueip.com/');
-
         // 輸入帳號和密碼
         const config = require('./nueipConfig.json');
         await driver.findElement(By.name('inputCompany')).sendKeys(config.inputCompany);
         await driver.findElement(By.name('inputID')).sendKeys(config.inputID);
         await driver.findElement(By.name('inputPassword')).sendKeys(config.inputPassword, Key.RETURN);
-
         // 在登入成功的頁面執行其他操作
-        const randomTime = (Math.floor(Math.random() * 4) + 3) * 25000;
+        const randomTime = (Math.floor(Math.random() * 4) + 3) * 50000;
+        // 找到按鈕
+        let buttonId = GetbuttonId();
+        console.log(buttonId)
         // 將毫秒轉換為分鐘
         console.log(`延遲 ${dayjs.duration(randomTime).minutes()} 分鐘`);
         await driver.sleep(randomTime);
-
-        // 找到按鈕並點擊
-        let buttonId = GetbuttonId();
-        console.log(buttonId)
+        // 點擊
         await driver.findElement(By.id(buttonId)).click();
-
         // 等待操作完成
         await driver.sleep(1000);
 
@@ -79,8 +76,8 @@ function GetbuttonId() {
 
     if (now.isAfter(nineAM) && now.isBefore(tenAM)) {
         buttonId = 'clockin';
-    }  
-    
+    }
+
     if (now.isAfter(sixPM) && now.isBefore(sevenPM)) {
         buttonId = 'clockout'
     }

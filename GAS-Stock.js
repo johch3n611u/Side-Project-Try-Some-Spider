@@ -129,22 +129,22 @@ function maxAndMin(sheet, cal) {
         suggestion = '建議購買';
     }
 
-    let averageDrop = round((drop / average) * 100);
+    let averageDrop = round((drop / average) * 100) * -1;
     console.log(averageDrop)
 
-    if (averageDrop > 20) {
+    if (averageDrop > 10) {
         msg += ', 超級無敵';
-    } else if (averageDrop > 15) {
+    } else if (averageDrop > 8) {
         msg += ', 超級';
-    } else if (averageDrop > 10) {
+    } else if (averageDrop > 5) {
         msg += ', 極度';
-    } else if (averageDrop >= 5) {
+    } else if (averageDrop >= 3) {
         msg += ', 非常';
     }
 
     msg = msg + suggestion;
 
-    if (Math.round(drop) < 1) {
+    if (Math.abs(drop) <= 0.5) {
         msg = ', 與均線接近持平可在觀望';
     }
 

@@ -1,4 +1,13 @@
-> 2023 / 05 /26
+> 2023 / 07 / 02
+
+1. 嘗試增加樂居網抓一些平常想關注的房屋物件
+2. 嘗試爬學習網站 viedo blob 檔案 
+   * [WebAPIs - Blob](https://ithelp.ithome.com.tw/articles/10246325)
+   * [什麼是 blob URL 以及為什麼使用它？](https://stackoverflow.com/questions/30864573/what-is-a-blob-url-and-why-it-is-used)
+   * [如何下載 URL 中帶有 Blob 的視頻](https://www.alphr.com/download-video-blob-url/)
+   * [github repo hahow-video-downloader](https://github.com/techmovie/hahow-video-downloader)
+
+> 2023 / 05 / 26
 
 ![image](https://github.com/johch3n611u/Side-Project-Try-Some-Spider/assets/46659635/21c783d2-c486-4ce2-b78b-21a33b8a3558)
 
@@ -14,7 +23,6 @@
 7. 新增 auto punch time card
 7. [臺北市政府行政機關辦公日曆表](https://data.gov.tw/dataset/145708)
 8. 移除 shell:startup => clear.bat => :: 使顯示器停下，並顯示"請按任意鍵繼續..." pause
-
 
 > 2023 / 05 / 03
 

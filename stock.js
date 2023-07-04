@@ -28,7 +28,7 @@ const urls = {
                     { name: '熱絡', range: '45-38' },
                 ]
             },
-            TSMC :{
+            TSMC: {
                 url: 'https://tw.stock.yahoo.com/quote/2330.TW',
                 regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/,
                 regx2: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\)">([^<]+)<\/span>/,
@@ -63,6 +63,10 @@ const urls = {
             regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(4px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/,
             regx2: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(4px\) D\(f\) Ai\(c\) C\(\$c-trend-down\)">([^<]+)<\/span>/,
         }
+    },
+    building: {
+        url: 'https://www.leju.com.tw/community?city=F&area=F249&building_type=3',
+        regx: ''
     }
 };
 
@@ -77,6 +81,7 @@ const urls = {
         'QQQ': await getPageTarget(driver, urls.us.QQQ),
         'BID': await getPageTarget(driver, urls.tw.index.BID, 300),
         'TSMC': await getPageTarget(driver, urls.tw.index.TSMC),
+        // 'building': await getPageTarget(driver, urls.building),
     };
     console.log(row);
     await setDataValue(row);
@@ -135,14 +140,14 @@ async function getPageTarget(driver, page, speed = 10) {
                 console.log('not match1', page.regx);
                 const match2 = result.match(page.regx2);
                 if (match2) {
-                    console.log('match2[1]',match2[1])
+                    console.log('match2[1]', match2[1])
                     res = match2[1].replace(',', '');
-                }else{
+                } else {
                     console.log('not match2', page.regx2);
                     const match3 = result.match(page.regx3);
                     if (match3) {
                         res = match3[1].replace(',', '');
-                    }else{
+                    } else {
                         console.log('not match3', page.regx3);
                     }
                 }
