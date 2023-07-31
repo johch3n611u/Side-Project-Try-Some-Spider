@@ -114,7 +114,7 @@ function createClient() {
     //規避部分chrome gpu bug，提升爬蟲穩定性
     options.addArguments('--disable-gpu');
 
-    return new Builder().forBrowser('chrome').withCapabilities(options).build()
+    return new Builder().forBrowser('firefox').withCapabilities(options).build()
 }
 async function getTechTitleCount(urlRoot, techTitleList, regexString) {
     const driver = createClient();

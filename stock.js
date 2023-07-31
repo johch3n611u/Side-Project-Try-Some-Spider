@@ -104,7 +104,7 @@ function createClient() {
     options.addArguments('--disable-dev-shm-usage');
     //規避部分chrome gpu bug，提升爬蟲穩定性
     options.addArguments('--disable-gpu');
-    return new Builder().forBrowser('chrome').withCapabilities(options).build()
+    return new Builder().forBrowser('firefox').withCapabilities(options).build()
 }
 
 async function setDataValue(row) {
