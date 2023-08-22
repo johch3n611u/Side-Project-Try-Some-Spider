@@ -90,10 +90,11 @@ const urls = {
 
 function createClient() {
     const { Builder, By, Key, until, Button } = require('selenium-webdriver');
-    const { Options } = require('selenium-webdriver/chrome.js');
+    // const { Options } = require('selenium-webdriver/chrome.js');
+    const { Options } = require('selenium-webdriver/firefox.js');
     const options = new Options();
     //因為FB會有notifications干擾到爬蟲，所以要先把它關閉
-    options.setUserPreferences({ 'profile.default_content_setting_values.notifications': 1 });
+    // options.setUserPreferences({ 'profile.default_content_setting_values.notifications': 1 });
     //不加載圖片提高效率
     options.addArguments('blink-settings=imagesEnabled=false');
     //瀏覽器不提供頁面觀看，linux下如果系統是純文字介面不加這條會啓動失敗
