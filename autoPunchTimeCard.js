@@ -1,4 +1,4 @@
-const { Builder, By, Key, until, Button } = require('selenium-webdriver');
+const { Builder, By, Key, until, Button, Actions } = require('selenium-webdriver');
 
 const dayjs = require('dayjs');
 const duration = require('dayjs/plugin/duration');
@@ -53,8 +53,13 @@ function createClient() {
         // 將毫秒轉換為分鐘
         console.log(`延遲 ${dayjs.duration(randomTime).minutes()} 分鐘`);
         await driver.sleep(randomTime);
+        
         // 點擊
-        await driver.findElement(By.id(buttonId)).click();
+        // https://sqa.stackexchange.com/questions/32697/webdriver-firefox-element-could-not-be-scrolled-into-view
+        // https://stackoverflow.com/questions/61795308/selenium-driver-actions-movetoelement-is-not-a-function
+        // await driver.findElement(By.id(buttonId)).click();
+        await driver.actions({bridge:true}).move(By.id(buttonId)).click().perform();
+
         // 等待操作完成
         await driver.sleep(1000);
 
