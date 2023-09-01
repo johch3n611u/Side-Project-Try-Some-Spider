@@ -37,6 +37,7 @@ const webConfig = {
         'azure': techCount[19],
         'aws': techCount[20],
         'gcp': techCount[21],
+        'visa sponsorship': teachCount[22],
     }
 
 

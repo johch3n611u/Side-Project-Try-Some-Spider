@@ -132,3 +132,4 @@ chromedriver.exe
 .env
 techtrendscrawler-7319fb62fc19.json
 nueipConfig.json
+geckodriver.exe

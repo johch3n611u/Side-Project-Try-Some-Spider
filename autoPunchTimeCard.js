@@ -8,9 +8,9 @@ function createClient() {
     // const { Options } = require('selenium-webdriver/chrome.js');
     const { Options } = require('selenium-webdriver/firefox.js');
     const options = new Options();
-    //因為FB會有notifications干擾到爬蟲，所以要先把它關閉
+    // 因為FB會有notifications干擾到爬蟲，所以要先把它關閉
     // options.setUserPreferences({ 'profile.default_content_setting_values.notifications': 1 });
-    //不加載圖片提高效率
+    // 不加載圖片提高效率
     options.addArguments('blink-settings=imagesEnabled=false');
     //瀏覽器不提供頁面觀看，linux下如果系統是純文字介面不加這條會啓動失敗
     options.addArguments('--headless');
@@ -21,10 +21,10 @@ function createClient() {
     //規避部分chrome gpu bug，提升爬蟲穩定性
     options.addArguments('--disable-gpu');
     return new Builder()
-    // .forBrowser('chrome')
-    .forBrowser('firefox')
-    .withCapabilities(options)
-    .build()
+        // .forBrowser('chrome')
+        .forBrowser('firefox')
+        .withCapabilities(options)
+        .build()
 }
 
 (async function example() {
@@ -47,21 +47,43 @@ function createClient() {
         await driver.findElement(By.name('inputPassword')).sendKeys(config.inputPassword, Key.RETURN);
         // 在登入成功的頁面執行其他操作
         const randomTime = (Math.floor(Math.random() * 4) + 3) * 50000;
-        // 找到按鈕
-        let buttonId = GetbuttonId();
-        console.log(buttonId)
+
         // 將毫秒轉換為分鐘
         console.log(`延遲 ${dayjs.duration(randomTime).minutes()} 分鐘`);
-        await driver.sleep(randomTime);
-        
+        // await driver.sleep(randomTime);
+        await driver.sleep(10000);
+        // 找到按鈕
+        let buttonId = GetbuttonId();
+        console.log('按鈕 class', buttonId);
+
         // 點擊
         // https://sqa.stackexchange.com/questions/32697/webdriver-firefox-element-could-not-be-scrolled-into-view
         // https://stackoverflow.com/questions/61795308/selenium-driver-actions-movetoelement-is-not-a-function
         // await driver.findElement(By.id(buttonId)).click();
-        await driver.actions({bridge:true}).move(By.id(buttonId)).click().perform();
+        // https://stackoverflow.com/questions/56085152/selenium-python-error-element-could-not-be-scrolled-into-view
+
+        const elements = await driver.findElements(
+            By.xpath("//div[contains(@class, 'clock_btn') and contains(@class, 'margin-right-5') and contains(@class, 'padding-all-20') and contains(@class, 'Link') and contains(@class, 'ctrl-clockin') and @value='2']")
+        );
+
+        console.log(elements)
+
+        for (let element of elements) {
+            const isDisplayed = await element.isDisplayed();
+            console.log(isDisplayed);
+            if (isDisplayed) {
+                console.log(element);
+
+                await element.click();
+
+                // await driver.actions().move({ origin: element }).click().perform();
+                // await driver.executeScript("arguments[0].click();", element);
+                // await element.sendKeys(Key.ENTER).perform();
+            }
+        }
 
         // 等待操作完成
-        await driver.sleep(1000);
+        await driver.sleep(3000);
 
     } finally {
         // 關閉瀏覽器
@@ -102,6 +124,6 @@ function IsHoliday() {
         const now = dayjs().format('YYYYMMDD');
         return holidayDate.isSame(now, 'day');
     });
-    console.log(holiday);
+    // console.log(holiday);
     return holiday ? true : false;
 }
