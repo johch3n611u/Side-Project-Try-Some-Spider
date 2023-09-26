@@ -11,7 +11,7 @@ const webConfig = {
 
     let regex = /<span data-automation="totalJobsCount">([^<]+)<\/span>/;
     let techCount, site104TechCount = [];
-    let techList = ['React', 'angular', 'vue', 'c%23', 'javascript', 'java', 'back end', 'front end', 'Python', 'Golang', 'Rails', 'ruby on rails', 'ruby', 'php', 'laravel', '.net', '.net core', 'Software Engineer', 'Full Stack', 'azure', 'aws', 'gcp'];
+    let techList = ['React', 'angular', 'vue', 'c%23', 'javascript', 'java', 'back end', 'front end', 'Python', 'Golang', 'Rails', 'ruby on rails', 'ruby', 'php', 'laravel', '.net', '.net core', 'Software Engineer', 'Full Stack', 'azure', 'aws', 'gcp', 'visa sponsorship'];
     techCount = await getTechTitleCount(webConfig.Seek, techList, regex);
     const seekData = {
         'date': dayjs().format('YYYY/MMDD'),
@@ -37,7 +37,7 @@ const webConfig = {
         'azure': techCount[19],
         'aws': techCount[20],
         'gcp': techCount[21],
-        'visa sponsorship': teachCount[22],
+        'visa sponsorship': techCount[22],
     }
 
 
@@ -92,7 +92,7 @@ async function setDataValue(headerValues, rowObject,sheetID){
     console.log(rowObject);
         // https://docs.google.com/spreadsheets/d/<docID>/edit#gid=<sheetID>
     const sheet = await getSheetData('1Pw1hj-LDVy4Yyqa5UbexPfRUmOr3mp84bL_UAdG8XU4', sheetID);
-    await sheet.setHeaderRow(headerValues);
+    // await sheet.setHeaderRow(headerValues);
     await sheet.addRow(rowObject);
 }
 

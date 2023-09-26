@@ -7,9 +7,9 @@ const urls = {
         index: {
             tw_stock: {
                 url: 'https://s.yimg.com/nb/tw_stock_frontend/scripts/TseChart/TseChart.eb1b267900.html?sid=TSE',
-                regx: /<g style="" font-size="14px" zIndex="3" transform="translate\(464,0\)"><text x="3" zIndex="1" style="color:#DF3F3F;fill:#DF3F3F;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
-                regx2: /<g style="" font-size="14px" zIndex="3" transform="translate\(464,0\)"><text x="3" zIndex="1" style="color:#338B48;fill:#338B48;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
-                regx3: /<g style="" font-size="14px" zIndex="3" transform="translate\(464,0\)"><text x="3" zIndex="1" style="color:#338B48;fill:#338B48;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/
+                regx: /<g style="" font-size="14px" zIndex="3" transform="translate\(462,0\)"><text x="3" zIndex="1" style="color:#DF3F3F;fill:#DF3F3F;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
+                regx2: /<g style="" font-size="14px" zIndex="3" transform="translate\(462,0\)"><text x="3" zIndex="1" style="color:#338B48;fill:#338B48;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
+                regx3: /<g style="" font-size="14px" zIndex="3" transform="translate\(462,0\)"><text x="3" zIndex="1" style="color:#338B48;fill:#338B48;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/
             },
             tw_0050: {
                 url: 'https://tw.stock.yahoo.com/quote/0050',
