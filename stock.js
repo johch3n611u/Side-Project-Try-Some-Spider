@@ -9,7 +9,8 @@ const urls = {
                 url: 'https://s.yimg.com/nb/tw_stock_frontend/scripts/TseChart/TseChart.eb1b267900.html?sid=TSE',
                 regx: /<g style="" font-size="14px" zIndex="3" transform="translate\(462,0\)"><text x="3" zIndex="1" style="color:#DF3F3F;fill:#DF3F3F;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
                 regx2: /<g style="" font-size="14px" zIndex="3" transform="translate\(462,0\)"><text x="3" zIndex="1" style="color:#338B48;fill:#338B48;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
-                regx3: /<g style="" font-size="14px" zIndex="3" transform="translate\(462,0\)"><text x="3" zIndex="1" style="color:#338B48;fill:#338B48;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/
+                regx3: /<g style="" font-size="14px" zIndex="3" transform="translate\(462,0\)"><text x="3" zIndex="1" style="color:#338B48;fill:#338B48;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
+                regx4: /<g style="" font-size="14px" zIndex="3" transform="translate\(464,0\)"><text x="3" zIndex="1" style="color:#338B48;fill:#338B48;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
             },
             tw_0050: {
                 url: 'https://tw.stock.yahoo.com/quote/0050',
@@ -30,6 +31,12 @@ const urls = {
             },
             TSMC: {
                 url: 'https://tw.stock.yahoo.com/quote/2330.TW',
+                regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/,
+                regx2: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\)">([^<]+)<\/span>/,
+                regx3: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\) C\(\$c-trend-down\)">([^<]+)<\/span>/,
+            },
+            us00679b: {
+                url: 'https://tw.stock.yahoo.com/quote/00679B',
                 regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/,
                 regx2: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\)">([^<]+)<\/span>/,
                 regx3: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\) C\(\$c-trend-down\)">([^<]+)<\/span>/,
@@ -81,6 +88,7 @@ const urls = {
         'QQQ': await getPageTarget(driver, urls.us.QQQ),
         'BID': await getPageTarget(driver, urls.tw.index.BID, 300),
         'TSMC': await getPageTarget(driver, urls.tw.index.TSMC),
+        'us00679b': await getPageTarget(driver, urls.tw.index.us00679b),
         // 'building': await getPageTarget(driver, urls.building),
     };
     console.log(row);
@@ -131,6 +139,7 @@ function testResult(result) {
 async function getPageTarget(driver, page, speed = 10) {
     try {
         let res;
+        console.log(page.url)
         await driver.get(page.url);
         await driver.sleep((Math.floor(Math.random() * 4) + 3) * speed);
         await driver.getPageSource().then(result => {
@@ -150,6 +159,12 @@ async function getPageTarget(driver, page, speed = 10) {
                         res = match3[1].replace(',', '');
                     } else {
                         console.log('not match3', page.regx3);
+                        const match4 = result.match(page.regx4);
+                        if (match4) {
+                            res = match4[1].replace(',', '');
+                        } else {
+                            console.log('not match4', page.regx4);
+                        }
                     }
                 }
             }
