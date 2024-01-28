@@ -11,6 +11,7 @@ const urls = {
                 regx2: /<g style="" font-size="14px" zIndex="3" transform="translate\(462,0\)"><text x="3" zIndex="1" style="color:#338B48;fill:#338B48;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
                 regx3: /<g style="" font-size="14px" zIndex="3" transform="translate\(462,0\)"><text x="3" zIndex="1" style="color:#338B48;fill:#338B48;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
                 regx4: /<g style="" font-size="14px" zIndex="3" transform="translate\(464,0\)"><text x="3" zIndex="1" style="color:#338B48;fill:#338B48;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
+                regx5: /<g style="" font-size="14px" zIndex="3" transform="translate\(464,0\)"><text x="3" zIndex="1" style="color:#DF3F3F;fill:#DF3F3F;" y="15"><tspan style="font-weight:bold">([^<]+)<\/tspan><\/text><\/g>/,
             },
             tw_0050: {
                 url: 'https://tw.stock.yahoo.com/quote/0050',
@@ -40,6 +41,10 @@ const urls = {
                 regx: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\) C\(\$c-trend-up\)">([^<]+)<\/span>/,
                 regx2: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\)">([^<]+)<\/span>/,
                 regx3: /<span class="Fz\(32px\) Fw\(b\) Lh\(1\) Mend\(16px\) D\(f\) Ai\(c\) C\(\$c-trend-down\)">([^<]+)<\/span>/,
+            },
+            house: {
+                url: 'https://www.rakuya.com.tw/sell/result?city=3&price=~2500&typecode=R4%2CR5%2CR9&sort=21',
+                regx: /<span class="setSearchTotal setSearchItemTotal">([^<]+)<\/span>/
             }
         },
         category: {
@@ -89,6 +94,7 @@ const urls = {
         'BID': await getPageTarget(driver, urls.tw.index.BID, 300),
         'TSMC': await getPageTarget(driver, urls.tw.index.TSMC),
         'us00679b': await getPageTarget(driver, urls.tw.index.us00679b),
+        'house': await getPageTarget(driver, urls.tw.index.house),
         // 'building': await getPageTarget(driver, urls.building),
     };
     console.log(row);
@@ -164,6 +170,12 @@ async function getPageTarget(driver, page, speed = 10) {
                             res = match4[1].replace(',', '');
                         } else {
                             console.log('not match4', page.regx4);
+                            const match5 = result.match(page.regx5);
+                            if (match5) {
+                                res = match5[1].replace(',', '');
+                            } else {
+                                console.log('not match5', page.regx5);
+                            }
                         }
                     }
                 }
