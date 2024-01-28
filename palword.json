@@ -1,0 +1,1252 @@
+[
+  {
+    "image": "T_SheepBall_icon_normal.webp",
+    "number": "1",
+    "name": "棉悠悠",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["生產1", "搬運1", "放牧1"],
+    "drops": ["羊毛", "棉悠悠羊肉"],
+    "latlngs": []
+  },
+  {
+    "image": "T_PinkCat_icon_normal.webp",
+    "number": "2",
+    "name": "搗蛋貓",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["生產1", "收成1", "挖掘1", "搬運1"],
+    "drops": ["紅色莓果"],
+    "latlngs": []
+  },
+  {
+    "image": "T_ChickenPal_icon_normal.webp",
+    "number": "3",
+    "name": "皮皮雞",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["收成1", "放牧1"],
+    "drops": ["蛋", "皮皮雞肉"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Carbunclo_icon_normal.webp",
+    "number": "4",
+    "name": "翠葉鼠",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種1", "生產1", "收成1", "採伐1", "製藥1"],
+    "drops": ["莓果種子", "劣質藥品"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Kitsunebi_icon_normal.webp",
+    "number": "5",
+    "name": "火絨狐",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調1"],
+    "drops": ["皮革", "噴火器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_BluePlatypus_icon_normal.webp",
+    "number": "6",
+    "name": "衝浪鴨",
+    "elements": ["T_Icon_element_s_02.webp"],
+    "workskills": ["澆水1", "生產1", "搬運1"],
+    "drops": ["皮革", "帕魯體液"],
+    "latlngs": []
+  },
+  {
+    "image": "T_ElecCat_icon_normal.webp",
+    "number": "7",
+    "name": "伏特喵",
+    "elements": ["T_Icon_element_s_03.webp"],
+    "workskills": ["發電1", "生產1", "搬運1"],
+    "drops": ["發電器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Monkey_icon_normal.webp",
+    "number": "8",
+    "name": "新葉猿",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種1", "生產1", "收成1", "採伐1", "搬運1"],
+    "drops": ["蘑菇"],
+    "latlngs": []
+  },
+  {
+    "image": "T_FlameBambi_icon_normal.webp",
+    "number": "9",
+    "name": "燎火鹿",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調1"],
+    "drops": ["噴火器官", "皮革"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Penguin_icon_normal.webp",
+    "number": "10",
+    "name": "企丸丸",
+    "elements": ["T_Icon_element_s_02.webp", "T_Icon_element_s_08.webp"],
+    "workskills": ["澆水1", "生產1", "冷卻1", "搬運1"],
+    "drops": ["結冰器官", "帕魯體液"],
+    "latlngs": []
+  },
+  {
+    "image": "T_CaptainPenguin_icon_normal.webp",
+    "number": "11",
+    "name": "企丸王",
+    "elements": ["T_Icon_element_s_02.webp", "T_Icon_element_s_08.webp"],
+    "workskills": ["澆水2", "生產2", "挖掘2", "冷卻2", "搬運2"],
+    "drops": ["結冰器官", "企丸王的羽毛裝飾"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Hedgehog_icon_normal.webp",
+    "number": "12",
+    "name": "電棘鼠",
+    "elements": ["T_Icon_element_s_03.webp"],
+    "workskills": ["發電1"],
+    "drops": ["發電器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Hedgehog_Ice_icon_normal.webp",
+    "number": "12",
+    "name": "冰刺鼠",
+    "elements": ["T_Icon_element_s_08.webp"],
+    "workskills": ["冷卻1"],
+    "drops": ["結冰器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_PlantSlime_icon_normal.webp",
+    "number": "13",
+    "name": "葉泥泥",
+    "elements": ["T_Icon_element_s_04.webp", "T_Icon_element_s_07.webp"],
+    "workskills": ["播種1"],
+    "drops": ["莓果種子", "葉泥泥的葉子"],
+    "latlngs": []
+  },
+  {
+    "image": "T_PlantSlime_icon_normal.webp",
+    "number": "13",
+    "name": "葉泥泥",
+    "elements": ["T_Icon_element_s_04.webp", "T_Icon_element_s_07.webp"],
+    "workskills": ["播種1"],
+    "drops": ["莓果種子", "美麗花朵", "葉泥泥的葉子"],
+    "latlngs": []
+  },
+  {
+    "image": "T_CuteFox_icon_normal.webp",
+    "number": "14",
+    "name": "玉藻狐",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["收成1", "放牧1"],
+    "drops": ["皮革", "骨頭"],
+    "latlngs": []
+  },
+  {
+    "image": "T_WizardOwl_icon_normal.webp",
+    "number": "15",
+    "name": "啼卡爾",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["收成1"],
+    "drops": ["纖維", "先進技術書籍"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Ganesha_icon_normal.webp",
+    "number": "16",
+    "name": "壺小象",
+    "elements": ["T_Icon_element_s_02.webp"],
+    "workskills": ["澆水1"],
+    "drops": ["帕魯體液"],
+    "latlngs": []
+  },
+  {
+    "image": "T_NegativeKoala_icon_normal.webp",
+    "number": "17",
+    "name": "瞅什魔",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["生產1", "挖掘1", "搬運1"],
+    "drops": ["毒腺"],
+    "latlngs": []
+  },
+  {
+    "image": "T_WoolFox_icon_normal.webp",
+    "number": "18",
+    "name": "米露菲",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["收成1", "放牧1"],
+    "drops": ["羊毛"],
+    "latlngs": []
+  },
+  {
+    "image": "T_DreamDemon_icon_normal.webp",
+    "number": "19",
+    "name": "寐魔",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["生產1", "收成1", "搬運1"],
+    "drops": ["毒腺", "小型帕魯之魂"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Boar_icon_normal.webp",
+    "number": "20",
+    "name": "草莽豬",
+    "elements": ["T_Icon_element_s_07.webp"],
+    "workskills": ["挖掘1"],
+    "drops": ["草莽豬肉", "皮革", "骨頭"],
+    "latlngs": []
+  },
+  {
+    "image": "T_NightFox_icon_normal.webp",
+    "number": "21",
+    "name": "露娜蒂",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["收成1"],
+    "drops": ["皮革", "小型帕魯之魂"],
+    "latlngs": []
+  },
+  {
+    "image": "T_CuteMole_icon_normal.webp",
+    "number": "22",
+    "name": "遁地鼠",
+    "elements": ["T_Icon_element_s_07.webp"],
+    "workskills": ["生產1", "挖掘1", "搬運1"],
+    "drops": ["皮革"],
+    "latlngs": []
+  },
+  {
+    "image": "T_NegativeOctopus_icon_normal.webp",
+    "number": "23",
+    "name": "勾魂魷",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["收成1", "搬運2"],
+    "drops": ["毒腺"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Bastet_icon_normal.webp",
+    "number": "24",
+    "name": "喵絲特",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["放牧1"],
+    "drops": ["金幣"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Bastet_Ice_icon_normal.webp",
+    "number": "24",
+    "name": "冰絲特",
+    "elements": ["T_Icon_element_s_08.webp"],
+    "workskills": ["冷卻1", "放牧1"],
+    "drops": ["結冰器官", "藍寶石"],
+    "latlngs": []
+  },
+  {
+    "image": "T_FlyingManta_icon_normal.webp",
+    "number": "25",
+    "name": "魯米兒",
+    "elements": ["T_Icon_element_s_02.webp"],
+    "workskills": ["澆水1", "搬運1"],
+    "drops": ["帕魯體液"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Garm_icon_normal.webp",
+    "number": "26",
+    "name": "獵狼",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["收成1"],
+    "drops": ["皮革", "紅寶石", "金幣"],
+    "latlngs": []
+  },
+  {
+    "image": "T_ColorfulBird_icon_normal.webp",
+    "number": "27",
+    "name": "炸蛋鳥",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["收成1"],
+    "drops": ["火藥", "炸蛋鳥的羽毛"],
+    "latlngs": []
+  },
+  {
+    "image": "T_FlowerRabbit_icon_normal.webp",
+    "number": "28",
+    "name": "波娜兔",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種1", "生產1", "收成1", "製藥1", "搬運1"],
+    "drops": ["劣質藥品", "小麥種子"],
+    "latlngs": []
+  },
+  {
+    "image": "T_CowPal_icon_normal.webp",
+    "number": "29",
+    "name": "波霸牛",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["放牧1"],
+    "drops": ["波霸牛肉", "牛奶"],
+    "latlngs": []
+  },
+  {
+    "image": "T_LittleBriarRose_icon_normal.webp",
+    "number": "30",
+    "name": "荊棘魔仙",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種1", "生產1", "收成1", "製藥2", "搬運1"],
+    "drops": ["小麥種子", "萵苣種子"],
+    "latlngs": []
+  },
+  {
+    "image": "T_SharkKid_icon_normal.webp",
+    "number": "31",
+    "name": "鯊小子",
+    "elements": ["T_Icon_element_s_02.webp"],
+    "workskills": ["澆水2", "生產1", "搬運1"],
+    "drops": ["帕魯體液"],
+    "latlngs": []
+  },
+  {
+    "image": "T_SharkKid_Fire_icon_normal.webp",
+    "number": "31",
+    "name": "紅小鯊",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調2", "生產1", "搬運1"],
+    "drops": ["噴火器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_WindChimes_icon_normal.webp",
+    "number": "32",
+    "name": "吊縛靈",
+    "elements": ["T_Icon_element_s_07.webp"],
+    "workskills": ["生產1", "收成1", "搬運2"],
+    "drops": ["纖維"],
+    "latlngs": []
+  },
+  {
+    "image": "T_WindChimes_Ice_icon_normal.webp",
+    "number": "32",
+    "name": "冰縛靈",
+    "elements": ["T_Icon_element_s_08.webp"],
+    "workskills": ["生產1", "收成1", "冷卻1", "搬運2"],
+    "drops": ["纖維", "結冰器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_GrassPanda_icon_normal.webp",
+    "number": "33",
+    "name": "葉胖達",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種2", "生產2", "採伐2", "搬運3"],
+    "drops": ["蘑菇", "皮革", "蕃茄種子"],
+    "latlngs": []
+  },
+  {
+    "image": "T_GrassPanda_Electric_icon_normal.webp",
+    "number": "33",
+    "name": "雷胖達",
+    "elements": ["T_Icon_element_s_03.webp"],
+    "workskills": ["發電2", "生產2", "採伐2", "搬運3"],
+    "drops": ["蘑菇", "發電器官", "皮革"],
+    "latlngs": []
+  },
+  {
+    "image": "T_SweetsSheep_icon_normal.webp",
+    "number": "34",
+    "name": "棉花糖",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["放牧1"],
+    "drops": ["棉花糖", "優質帕魯油"],
+    "latlngs": []
+  },
+  {
+    "image": "T_BerryGoat_icon_normal.webp",
+    "number": "35",
+    "name": "灌木羊",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種2", "放牧1"],
+    "drops": ["灌木羊香草肉", "紅色莓果", "角"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Alpaca_icon_normal.webp",
+    "number": "36",
+    "name": "美露帕",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["放牧1"],
+    "drops": ["羊毛", "皮革"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Deer_icon_normal.webp",
+    "number": "37",
+    "name": "紫霞鹿",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["採伐2"],
+    "drops": ["紫霞鹿肉", "皮革", "角"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Deer_Ground_icon_normal.webp",
+    "number": "37",
+    "name": "祇岳鹿",
+    "elements": ["T_Icon_element_s_07.webp"],
+    "workskills": ["採伐2"],
+    "drops": ["紫霞鹿肉", "皮革", "角"],
+    "latlngs": []
+  },
+  {
+    "image": "T_HawkBird_icon_normal.webp",
+    "number": "38",
+    "name": "疾風隼",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["收成2"],
+    "drops": ["皮革"],
+    "latlngs": []
+  },
+  {
+    "image": "T_PinkRabbit_icon_normal.webp",
+    "number": "39",
+    "name": "姬小兔",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["生產1", "收成1", "搬運1"],
+    "drops": ["皮革", "美麗花朵"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Baphomet_icon_normal.webp",
+    "number": "40",
+    "name": "炎魔羊",
+    "elements": ["T_Icon_element_s_01.webp", "T_Icon_element_s_05.webp"],
+    "workskills": ["烹調1", "生產2", "挖掘1", "搬運2"],
+    "drops": ["角", "皮革"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Baphomet_Dark_icon_normal.webp",
+    "number": "40",
+    "name": "闇魔羊",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["生產2", "挖掘1", "搬運2"],
+    "drops": ["角", "皮革"],
+    "latlngs": []
+  },
+  {
+    "image": "T_CuteButterfly_icon_normal.webp",
+    "number": "41",
+    "name": "幻悅蝶",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種2", "製藥1"],
+    "drops": ["蜂蜜", "萵苣種子", "小麥種子"],
+    "latlngs": []
+  },
+  {
+    "image": "T_FlameBuffalo_icon_normal.webp",
+    "number": "42",
+    "name": "熾焰牛",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調2", "採伐1"],
+    "drops": ["角", "噴火器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_LazyCatfish_icon_normal.webp",
+    "number": "43",
+    "name": "趴趴鯰",
+    "elements": ["T_Icon_element_s_07.webp"],
+    "workskills": ["澆水1", "挖掘2", "搬運1"],
+    "drops": ["趴趴鯰肉", "優質帕魯油"],
+    "latlngs": []
+  },
+  {
+    "image": "T_DarkCrow_icon_normal.webp",
+    "number": "44",
+    "name": "黑鴉隱士",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["採伐1"],
+    "drops": ["骨頭", "毒腺", "小型帕魯之魂"],
+    "latlngs": []
+  },
+  {
+    "image": "T_LizardMan_icon_normal.webp",
+    "number": "45",
+    "name": "龐克蜥",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["生產1", "收成1", "搬運1"],
+    "drops": ["青銅鑰匙", "白銀鑰匙"],
+    "latlngs": []
+  },
+  {
+    "image": "T_LizardMan_Fire_icon_normal.webp",
+    "number": "45",
+    "name": "熱血蜥",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調1", "生產1", "收成1", "搬運1"],
+    "drops": ["噴火器官", "白銀鑰匙"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Werewolf_icon_normal.webp",
+    "number": "46",
+    "name": "月鐮魔",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["生產2"],
+    "drops": ["骨頭"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Eagle_icon_normal.webp",
+    "number": "47",
+    "name": "天擒鳥",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["收成2"],
+    "drops": ["天擒鳥肉", "皮革"],
+    "latlngs": []
+  },
+  {
+    "image": "T_RobinHood_icon_normal.webp",
+    "number": "48",
+    "name": "羽箭射手",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種1", "生產2", "收成2", "採伐1", "製藥1", "搬運2"],
+    "drops": ["小麥種子", "箭矢"],
+    "latlngs": []
+  },
+  {
+    "image": "T_RobinHood_Ground_icon_normal.webp",
+    "number": "48",
+    "name": "山岳射手",
+    "elements": ["T_Icon_element_s_04.webp", "T_Icon_element_s_07.webp"],
+    "workskills": ["生產2", "收成2", "採伐1", "製藥1", "搬運2"],
+    "drops": ["小麥種子", "箭矢"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Gorilla_icon_normal.webp",
+    "number": "49",
+    "name": "鐵拳猿",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["生產1", "採伐2", "搬運3"],
+    "drops": ["皮革", "骨頭"],
+    "latlngs": []
+  },
+  {
+    "image": "T_SoldierBee_icon_normal.webp",
+    "number": "50",
+    "name": "騎士蜂",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": [
+      "播種1",
+      "生產1",
+      "收成1",
+      "採伐1",
+      "製藥1",
+      "搬運2",
+      "放牧1"
+    ],
+    "drops": ["蜂蜜"],
+    "latlngs": []
+  },
+  {
+    "image": "T_QueenBee_icon_normal.webp",
+    "number": "51",
+    "name": "女皇蜂",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種2", "生產2", "收成2", "採伐1", "製藥2"],
+    "drops": ["蜂蜜", "女皇蜂法杖"],
+    "latlngs": []
+  },
+  {
+    "image": "T_NaughtyCat_icon_normal.webp",
+    "number": "52",
+    "name": "笑魘猫",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["收成2"],
+    "drops": ["優質帕魯油"],
+    "latlngs": []
+  },
+  {
+    "image": "T_MopBaby_icon_normal.webp",
+    "number": "53",
+    "name": "毛撣兒",
+    "elements": ["T_Icon_element_s_08.webp"],
+    "workskills": ["收成1", "冷卻1"],
+    "drops": ["羊毛"],
+    "latlngs": []
+  },
+  {
+    "image": "T_MopKing_icon_normal.webp",
+    "number": "54",
+    "name": "毛老爹",
+    "elements": ["T_Icon_element_s_08.webp"],
+    "workskills": ["收成2", "冷卻2"],
+    "drops": ["羊毛"],
+    "latlngs": []
+  },
+  {
+    "image": "T_WeaselDragon_icon_normal.webp",
+    "number": "55",
+    "name": "疾旋鼬",
+    "elements": ["T_Icon_element_s_08.webp", "T_Icon_element_s_06.webp"],
+    "workskills": ["收成1", "冷卻1"],
+    "drops": ["皮革"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Kirin_icon_normal.webp",
+    "number": "56",
+    "name": "雷角馬",
+    "elements": ["T_Icon_element_s_03.webp"],
+    "workskills": ["發電2", "採伐1"],
+    "drops": ["皮革", "發電器官", "角"],
+    "latlngs": []
+  },
+  {
+    "image": "T_IceFox_icon_normal.webp",
+    "number": "57",
+    "name": "吹雪狐",
+    "elements": ["T_Icon_element_s_08.webp"],
+    "workskills": ["冷卻2"],
+    "drops": ["皮革", "結冰器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_FireKirin_icon_normal.webp",
+    "number": "58",
+    "name": "火麒麟",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調2", "採伐1"],
+    "drops": ["噴火器官", "皮革"],
+    "latlngs": []
+  },
+  {
+    "image": "T_FireKirin_Dark_icon_normal.webp",
+    "number": "58",
+    "name": "邪麒麟",
+    "elements": ["T_Icon_element_s_01.webp", "T_Icon_element_s_05.webp"],
+    "workskills": ["烹調2", "採伐1"],
+    "drops": ["噴火器官", "皮革"],
+    "latlngs": []
+  },
+  {
+    "image": "T_IceDeer_icon_normal.webp",
+    "number": "59",
+    "name": "嚴冬鹿",
+    "elements": ["T_Icon_element_s_08.webp"],
+    "workskills": ["採伐2", "冷卻2"],
+    "drops": ["嚴冬鹿肉", "皮革", "角", "結冰器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_ThunderDog_icon_normal.webp",
+    "number": "60",
+    "name": "霹靂犬",
+    "elements": ["T_Icon_element_s_03.webp"],
+    "workskills": ["發電2"],
+    "drops": ["發電器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_AmaterasuWolf_icon_normal.webp",
+    "number": "61",
+    "name": "蒼焰狼",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調2"],
+    "drops": ["噴火器官", "皮革"],
+    "latlngs": []
+  },
+  {
+    "image": "T_RaijinDaughter_icon_normal.webp",
+    "number": "62",
+    "name": "雷鳴童子",
+    "elements": ["T_Icon_element_s_03.webp"],
+    "workskills": ["發電1", "生產1", "搬運1"],
+    "drops": ["發電器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Mutant_icon_normal.webp",
+    "number": "63",
+    "name": "秘斯媞雅",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["生產3", "收成1", "搬運1"],
+    "drops": ["帕魯礦碎片"],
+    "latlngs": []
+  },
+  {
+    "image": "T_FlowerDinosaur_icon_normal.webp",
+    "number": "64",
+    "name": "花冠龍",
+    "elements": ["T_Icon_element_s_04.webp", "T_Icon_element_s_06.webp"],
+    "workskills": ["播種2", "採伐2"],
+    "drops": ["小麥種子"],
+    "latlngs": []
+  },
+  {
+    "image": "T_FlowerDinosaur_Electric_icon_normal.webp",
+    "number": "64",
+    "name": "雷冠龍",
+    "elements": ["T_Icon_element_s_03.webp", "T_Icon_element_s_06.webp"],
+    "workskills": ["發電2", "採伐2"],
+    "drops": ["蕃茄種子"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Serpent_icon_normal.webp",
+    "number": "65",
+    "name": "滑水蛇",
+    "elements": ["T_Icon_element_s_02.webp"],
+    "workskills": ["澆水2"],
+    "drops": ["帕魯體液"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Serpent_Ground_icon_normal.webp",
+    "number": "65",
+    "name": "流沙蛇",
+    "elements": ["T_Icon_element_s_07.webp"],
+    "workskills": ["收成1"],
+    "drops": ["帕魯體液"],
+    "latlngs": []
+  },
+  {
+    "image": "T_GhostBeast_icon_normal.webp",
+    "number": "66",
+    "name": "噬魂獸",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["收成2", "挖掘1"],
+    "drops": ["骨頭", "小型帕魯之魂"],
+    "latlngs": []
+  },
+  {
+    "image": "T_DrillGame_icon_normal.webp",
+    "number": "67",
+    "name": "碎岩龜",
+    "elements": ["T_Icon_element_s_07.webp"],
+    "workskills": ["挖掘3"],
+    "drops": null,
+    "latlngs": []
+  },
+  {
+    "image": "T_CatBat_icon_normal.webp",
+    "number": "68",
+    "name": "貓蝠怪",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["收成2", "挖掘2", "搬運2"],
+    "drops": ["皮革", "小型帕魯之魂"],
+    "latlngs": []
+  },
+  {
+    "image": "T_PinkLizard_icon_normal.webp",
+    "number": "69",
+    "name": "博愛蜥",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["生產2", "挖掘1", "製藥2", "搬運2"],
+    "drops": ["蘑菇", "蛋糕", "可疑果汁", "怪異果汁", "消除記憶藥"],
+    "latlngs": []
+  },
+  {
+    "image": "T_LavaGirl_icon_normal.webp",
+    "number": "70",
+    "name": "融焰娘",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調1", "生產1", "搬運1", "放牧1"],
+    "drops": ["噴火器官", "優質帕魯油"],
+    "latlngs": []
+  },
+  {
+    "image": "T_BirdDragon_icon_normal.webp",
+    "number": "71",
+    "name": "烽歌龍",
+    "elements": ["T_Icon_element_s_01.webp", "T_Icon_element_s_05.webp"],
+    "workskills": ["烹調1", "搬運3"],
+    "drops": ["骨頭", "紅寶石", "金幣"],
+    "latlngs": []
+  },
+  {
+    "image": "T_BirdDragon_Ice_icon_normal.webp",
+    "number": "71",
+    "name": "霜歌龍",
+    "elements": ["T_Icon_element_s_08.webp", "T_Icon_element_s_05.webp"],
+    "workskills": ["冷卻2", "搬運3"],
+    "drops": ["骨頭", "結冰器官", "藍寶石"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Ronin_icon_normal.webp",
+    "number": "72",
+    "name": "浪刃武士",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調2", "生產1", "收成1", "採伐3", "搬運2"],
+    "drops": ["骨頭", "金屬錠"],
+    "latlngs": []
+  },
+  {
+    "image": "T_ThunderBird_icon_normal.webp",
+    "number": "73",
+    "name": "迅雷鳥",
+    "elements": ["T_Icon_element_s_03.webp"],
+    "workskills": ["發電2", "收成1", "搬運3"],
+    "drops": ["發電器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_RedArmorBird_icon_normal.webp",
+    "number": "74",
+    "name": "燧火鳥",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調3", "搬運3"],
+    "drops": ["噴火器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_CatMage_icon_normal.webp",
+    "number": "75",
+    "name": "闇巫貓",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["生產2", "製藥2", "搬運2"],
+    "drops": ["皮革", "闇巫貓的體毛", "先進技術書籍"],
+    "latlngs": []
+  },
+  {
+    "image": "T_FoxMage_icon_normal.webp",
+    "number": "76",
+    "name": "焰巫狐",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調2", "生產3", "搬運2"],
+    "drops": ["噴火器官", "先進技術書籍"],
+    "latlngs": []
+  },
+  {
+    "image": "T_GrassRabbitMan_icon_normal.webp",
+    "number": "77",
+    "name": "踏春兔",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種2", "生產3", "收成3", "採伐2", "搬運2"],
+    "drops": ["皮革", "骨頭"],
+    "latlngs": []
+  },
+  {
+    "image": "T_VioletFairy_icon_normal.webp",
+    "number": "78",
+    "name": "薇莉塔",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種2", "生產2", "收成2", "製藥3", "搬運1"],
+    "drops": ["劣質藥品", "蕃茄種子"],
+    "latlngs": []
+  },
+  {
+    "image": "T_WhiteMoth_icon_normal.webp",
+    "number": "79",
+    "name": "綢笠蛾",
+    "elements": ["T_Icon_element_s_08.webp"],
+    "workskills": ["製藥2", "冷卻2", "放牧1"],
+    "drops": ["優質布", "結冰器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_FairyDragon_icon_normal.webp",
+    "number": "80",
+    "name": "精靈龍",
+    "elements": ["T_Icon_element_s_06.webp"],
+    "workskills": ["採伐2"],
+    "drops": ["優質帕魯油"],
+    "latlngs": []
+  },
+  {
+    "image": "T_FairyDragon_Water_icon_normal.webp",
+    "number": "80",
+    "name": "水靈龍",
+    "elements": ["T_Icon_element_s_06.webp", "T_Icon_element_s_02.webp"],
+    "workskills": ["澆水3", "採伐2"],
+    "drops": ["優質帕魯油"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Kelpie_icon_normal.webp",
+    "number": "81",
+    "name": "水靈兒",
+    "elements": ["T_Icon_element_s_02.webp"],
+    "workskills": ["澆水1"],
+    "drops": ["水靈兒魚肉", "帕魯體液"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Kelpie_Fire_icon_normal.webp",
+    "number": "81",
+    "name": "火靈兒",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調1"],
+    "drops": ["水靈兒魚肉", "噴火器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_BlueDragon_icon_normal.webp",
+    "number": "82",
+    "name": "碧海龍",
+    "elements": ["T_Icon_element_s_02.webp", "T_Icon_element_s_06.webp"],
+    "workskills": ["澆水3"],
+    "drops": ["布"],
+    "latlngs": []
+  },
+  {
+    "image": "T_WhiteTiger_icon_normal.webp",
+    "number": "83",
+    "name": "冰棘獸",
+    "elements": ["T_Icon_element_s_08.webp"],
+    "workskills": ["生產1", "採伐2", "冷卻3"],
+    "drops": ["結冰器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Manticore_icon_normal.webp",
+    "number": "84",
+    "name": "獄焰王",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調3", "採伐2"],
+    "drops": ["噴火器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Manticore_Dark_icon_normal.webp",
+    "number": "84",
+    "name": "獄閻王",
+    "elements": ["T_Icon_element_s_01.webp", "T_Icon_element_s_05.webp"],
+    "workskills": ["烹調3", "採伐2"],
+    "drops": ["噴火器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_LazyDragon_icon_normal.webp",
+    "number": "85",
+    "name": "佩克龍",
+    "elements": ["T_Icon_element_s_06.webp", "T_Icon_element_s_02.webp"],
+    "workskills": ["澆水2", "搬運1"],
+    "drops": ["優質帕魯油", "紅寶石"],
+    "latlngs": []
+  },
+  {
+    "image": "T_LazyDragon_Electric_icon_normal.webp",
+    "number": "85",
+    "name": "派克龍",
+    "elements": ["T_Icon_element_s_06.webp", "T_Icon_element_s_03.webp"],
+    "workskills": ["發電3", "搬運1"],
+    "drops": ["優質帕魯油", "發電器官", "藍寶石"],
+    "latlngs": []
+  },
+  {
+    "image": "T_SakuraSaurus_icon_normal.webp",
+    "number": "86",
+    "name": "連理龍",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種3"],
+    "drops": ["連理龍肉", "蕃茄種子"],
+    "latlngs": []
+  },
+  {
+    "image": "T_SakuraSaurus_Water_icon_normal.webp",
+    "number": "86",
+    "name": "海誓龍",
+    "elements": ["T_Icon_element_s_04.webp", "T_Icon_element_s_02.webp"],
+    "workskills": ["澆水3"],
+    "drops": ["連理龍肉", "萵苣種子"],
+    "latlngs": []
+  },
+  {
+    "image": "T_FlowerDoll_icon_normal.webp",
+    "number": "87",
+    "name": "花麗娜",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種3", "生產2", "收成2", "製藥2", "搬運1"],
+    "drops": ["美麗花朵"],
+    "latlngs": []
+  },
+  {
+    "image": "T_VolcanicMonster_icon_normal.webp",
+    "number": "88",
+    "name": "熔岩獸",
+    "elements": ["T_Icon_element_s_01.webp", "T_Icon_element_s_07.webp"],
+    "workskills": ["烹調3", "挖掘3"],
+    "drops": ["噴火器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_VolcanicMonster_Ice_icon_normal.webp",
+    "number": "88",
+    "name": "寒霜獸",
+    "elements": ["T_Icon_element_s_08.webp", "T_Icon_element_s_07.webp"],
+    "workskills": ["挖掘3", "冷卻3"],
+    "drops": ["結冰器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_KingAlpaca_icon_normal.webp",
+    "number": "89",
+    "name": "君王美露帕",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["收成1"],
+    "drops": ["羊毛"],
+    "latlngs": []
+  },
+  {
+    "image": "T_KingAlpaca_Ice_icon_normal.webp",
+    "number": "89",
+    "name": "冰帝美露帕",
+    "elements": ["T_Icon_element_s_08.webp"],
+    "workskills": ["收成1", "冷卻3"],
+    "drops": ["羊毛", "結冰器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_GrassMammoth_icon_normal.webp",
+    "number": "90",
+    "name": "森猛獁",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種2", "採伐2", "挖掘2"],
+    "drops": ["優質帕魯油", "皮革", "森猛獁獸肉"],
+    "latlngs": []
+  },
+  {
+    "image": "T_GrassMammoth_Ice_icon_normal.webp",
+    "number": "90",
+    "name": "雪猛瑪",
+    "elements": ["T_Icon_element_s_08.webp"],
+    "workskills": ["採伐2", "挖掘2", "冷卻2"],
+    "drops": ["優質帕魯油", "皮革", "森猛獁獸肉"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Yeti_icon_normal.webp",
+    "number": "91",
+    "name": "白絨雪怪",
+    "elements": ["T_Icon_element_s_08.webp"],
+    "workskills": ["生產2", "採伐3", "冷卻2", "搬運4"],
+    "drops": ["結冰器官", "美麗花朵"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Yeti_Grass_icon_normal.webp",
+    "number": "91",
+    "name": "綠苔絨怪",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種1", "生產2", "採伐3", "搬運4"],
+    "drops": ["萵苣種子", "蕃茄種子", "美麗花朵"],
+    "latlngs": []
+  },
+  {
+    "image": "T_HerculesBeetle_icon_normal.webp",
+    "number": "92",
+    "name": "鎧格力斯",
+    "elements": ["T_Icon_element_s_07.webp", "T_Icon_element_s_04.webp"],
+    "workskills": ["播種1", "生產1", "採伐3", "搬運3"],
+    "drops": ["蜂蜜"],
+    "latlngs": []
+  },
+  {
+    "image": "T_FengyunDeeper_icon_normal.webp",
+    "number": "93",
+    "name": "雲海鹿",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["採伐2"],
+    "drops": ["皮革", "角"],
+    "latlngs": []
+  },
+  {
+    "image": "T_CatVampire_icon_normal.webp",
+    "number": "94",
+    "name": "夜幕魔蝠",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["製藥3"],
+    "drops": ["布", "小型帕魯之魂"],
+    "latlngs": []
+  },
+  {
+    "image": "T_SkyDragon_icon_normal.webp",
+    "number": "95",
+    "name": "天羽龍",
+    "elements": ["T_Icon_element_s_06.webp"],
+    "workskills": ["生產1", "收成2", "挖掘2", "搬運3"],
+    "drops": ["優質帕魯油"],
+    "latlngs": []
+  },
+  {
+    "image": "T_KingBahamut_icon_normal.webp",
+    "number": "96",
+    "name": "焰煌",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調3", "挖掘4"],
+    "drops": ["石炭", "噴火器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_HadesBird_icon_normal.webp",
+    "number": "97",
+    "name": "雷冥鳥",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["搬運3"],
+    "drops": ["毒腺", "中等帕魯之魂"],
+    "latlngs": []
+  },
+  {
+    "image": "T_BlackMetalDragon_icon_normal.webp",
+    "number": "98",
+    "name": "魔淵龍",
+    "elements": ["T_Icon_element_s_06.webp", "T_Icon_element_s_05.webp"],
+    "workskills": ["生產1", "挖掘4"],
+    "drops": ["帕魯金屬錠", "純水晶"],
+    "latlngs": []
+  },
+  {
+    "image": "T_DarkScorpion_icon_normal.webp",
+    "number": "99",
+    "name": "冥鎧蠍",
+    "elements": ["T_Icon_element_s_05.webp", "T_Icon_element_s_07.webp"],
+    "workskills": ["採伐2", "挖掘3"],
+    "drops": ["石炭", "毒腺"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Anubis_icon_normal.webp",
+    "number": "100",
+    "name": "阿努比斯",
+    "elements": ["T_Icon_element_s_07.webp"],
+    "workskills": ["生產4", "挖掘3", "搬運2"],
+    "drops": ["骨頭", "大型帕魯之魂", "革新技術書籍"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Umihebi_icon_normal.webp",
+    "number": "101",
+    "name": "覆海龍",
+    "elements": ["T_Icon_element_s_06.webp", "T_Icon_element_s_02.webp"],
+    "workskills": ["澆水4"],
+    "drops": ["帕魯體液"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Umihebi_Fire_icon_normal.webp",
+    "number": "101",
+    "name": "騰炎龍",
+    "elements": ["T_Icon_element_s_06.webp", "T_Icon_element_s_01.webp"],
+    "workskills": ["烹調4"],
+    "drops": ["優質帕魯油", "噴火器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Suzaku_icon_normal.webp",
+    "number": "102",
+    "name": "朱雀",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調3"],
+    "drops": ["噴火器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Suzaku_Water_icon_normal.webp",
+    "number": "102",
+    "name": "清雀",
+    "elements": ["T_Icon_element_s_02.webp"],
+    "workskills": ["澆水3"],
+    "drops": ["帕魯體液"],
+    "latlngs": []
+  },
+  {
+    "image": "T_ElecPanda_icon_normal.webp",
+    "number": "103",
+    "name": "暴電熊",
+    "elements": ["T_Icon_element_s_03.webp"],
+    "workskills": ["發電3", "生產2", "採伐2", "搬運3"],
+    "drops": ["發電器官", "皮革"],
+    "latlngs": []
+  },
+  {
+    "image": "T_LilyQueen_icon_normal.webp",
+    "number": "104",
+    "name": "百合女王",
+    "elements": ["T_Icon_element_s_04.webp"],
+    "workskills": ["播種4", "生產3", "收成2", "製藥3"],
+    "drops": ["劣質藥品", "美麗花朵", "革新技術書籍"],
+    "latlngs": []
+  },
+  {
+    "image": "T_LilyQueen_Dark_icon_normal.webp",
+    "number": "104",
+    "name": "黑月女王",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["生產3", "收成2", "製藥3"],
+    "drops": ["劣質藥品", "美麗花朵", "革新技術書籍"],
+    "latlngs": []
+  },
+  {
+    "image": "T_Horus_icon_normal.webp",
+    "number": "105",
+    "name": "荷魯斯",
+    "elements": ["T_Icon_element_s_01.webp"],
+    "workskills": ["烹調3", "搬運3"],
+    "drops": ["噴火器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_ThunderDragonMan_icon_normal.webp",
+    "number": "106",
+    "name": "波魯傑克斯",
+    "elements": ["T_Icon_element_s_06.webp", "T_Icon_element_s_03.webp"],
+    "workskills": ["發電4", "生產2", "搬運3"],
+    "drops": ["發電器官"],
+    "latlngs": []
+  },
+  {
+    "image": "T_BlackGriffon_icon_normal.webp",
+    "number": "107",
+    "name": "異構格里芬",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["收成1"],
+    "drops": ["帕魯金屬錠", "碳纖維", "革新技術書籍"],
+    "latlngs": []
+  },
+  {
+    "image": "T_SaintCentaur_icon_normal.webp",
+    "number": "108",
+    "name": "聖光騎士",
+    "elements": ["T_Icon_element_s_00.webp"],
+    "workskills": ["採伐2", "挖掘2"],
+    "drops": ["帕魯金屬錠", "鑽石"],
+    "latlngs": []
+  },
+  {
+    "image": "T_BlackCentaur_icon_normal.webp",
+    "number": "109",
+    "name": "混沌騎士",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["採伐2", "挖掘2"],
+    "drops": ["帕魯金屬錠", "大型帕魯之魂"],
+    "latlngs": []
+  },
+  {
+    "image": "T_IceHorse_icon_normal.webp",
+    "number": "110",
+    "name": "喚冬獸",
+    "elements": ["T_Icon_element_s_08.webp"],
+    "workskills": ["冷卻4"],
+    "drops": ["結冰器官", "鑽石"],
+    "latlngs": []
+  },
+  {
+    "image": "T_IceHorse_Dark_icon_normal.webp",
+    "number": "110",
+    "name": "喚夜獸",
+    "elements": ["T_Icon_element_s_05.webp"],
+    "workskills": ["收成4"],
+    "drops": ["純水晶", "大型帕魯之魂"],
+    "latlngs": []
+  },
+  {
+    "image": "T_JetDragon_icon_normal.webp",
+    "number": "111",
+    "name": "空渦龍",
+    "elements": ["T_Icon_element_s_06.webp"],
+    "workskills": ["收成3"],
+    "drops": ["純水晶", "聚合物", "碳纖維", "鑽石"],
+    "latlngs": []
+  }
+]
